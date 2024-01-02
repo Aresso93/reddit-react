@@ -8,8 +8,10 @@ function App() {
   const reddit = useRedditApi();
 
   useEffect(() => {
-    reddit.actions.getSubredditData("minecraft");
+    reddit.actions.getSubredditData();
   }, []);
+
+  //console.log(reddit.states.data);
 
   return (
     <>

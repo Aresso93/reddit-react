@@ -9,9 +9,9 @@ interface PostCardProps {
   title: string;
   author: string;
   id: string;
-  selftext: string;
   ups: number;
   downs: number;
+  thumbnail: string;
 }
 
 export default function PostCard(props: PostCardProps) {
@@ -19,7 +19,7 @@ export default function PostCard(props: PostCardProps) {
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
         sx={{ height: 140 }}
-        image="/static/images/cards/contemplative-reptile.jpg"
+        image={props.thumbnail}
         title="green iguana"
       />
       <CardContent>
@@ -27,7 +27,7 @@ export default function PostCard(props: PostCardProps) {
           {props.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {props.selftext}
+          AAAAA
         </Typography>
       </CardContent>
       <CardActions>
