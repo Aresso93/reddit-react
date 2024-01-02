@@ -1,6 +1,5 @@
-import { Post } from "../model/reddit-post";
+import { Data, Post } from "../model/reddit-post";
 import PostCard from "./reddit-post-card";
-import RedditPostCard from "./reddit-post-card";
 
 interface PostListProps {
   posts: Post[];
@@ -11,12 +10,12 @@ export default function RedditPostList(props: PostListProps) {
     <>
       {props.posts.map((post: Post) => {
         <PostCard
-          title={post.title}
-          author={post.author}
-          id={post.id}
-          selftext={post.selftext}
-          ups={post.ups}
-          downs={post.downs}
+          title={post.data.title}
+          author={post.data.author}
+          id={post.data.id}
+          selftext={post.data.selftext}
+          ups={post.data.ups}
+          downs={post.data.downs}
         />;
       })}
     </>

@@ -1,4 +1,9 @@
 export interface Post {
+  kind: string;
+  data: Data;
+}
+
+export interface Data {
   approved_at_utc: any;
   subreddit: string;
   selftext: string;

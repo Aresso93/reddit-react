@@ -14,14 +14,14 @@ function App() {
   return (
     <>
       <RedditPostList posts={reddit.states.data} />
-      <PostCard
+      {/* <PostCard
         title={"sss"}
         author={"ffff"}
         id={"ggg"}
         selftext={"oooooooos"}
         ups={440}
         downs={20}
-      ></PostCard>
+      ></PostCard> */}
     </>
   );
 }

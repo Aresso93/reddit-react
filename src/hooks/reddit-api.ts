@@ -8,7 +8,6 @@ export function useRedditApi() {
   async function getSubredditData(subreddit: string) {
     const response = await axiosService(subreddit + "/new.json");
     console.log(response.data.data.children);
-
     setData(response.data.data.children);
   }
 
