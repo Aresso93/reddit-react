@@ -8,7 +8,7 @@ interface PostListProps {
 export default function RedditPostList(props: PostListProps) {
   return (
     <>
-      {props.posts.map((post: Post) => {
+      {props.posts.map((post: Post) => (
         <PostCard
           title={post.data.title}
           //   author={post.data.author}
@@ -16,8 +16,8 @@ export default function RedditPostList(props: PostListProps) {
           //   ups={post.data.ups}
           //   downs={post.data.downs}
           //   thumbnail={post.data.thumbnail}
-        />;
-      })}
+        />
+      ))}
     </>
   );
 }
